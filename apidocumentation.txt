@@ -1,0 +1,33 @@
+1. GET stores
+
+https://api-fab02.efood.real-pp.de/api/v2/real/stores/zipCode/40463?storeName=vaos-48606&currentPage=0&distance=500&pageSize=4
+looks out for the type in the response - STORE is normal stores , DELIVERY is the home delivery
+
+2. GET Search for items
+
+https://api-fab02.efood.real-pp.de/api/v2/real/products/search?query=milch:relevance:category:1:availableInStores:vaos-48606&storeName=vaos-48606&currentPage=0&fields=DEFAULT&pageSize=36
+
+3. GET all products
+
+https://api-fab02.efood.real-pp.de/api/v2/real/products/search?query=:relevance:category:1:availableInStores:vaos-48606&storeName=vaos-48606&currentPage=0&fields=DEFAULT&pageSize=36
+
+4. POST an item to cart
+
+https://api-fab02.efood.real-pp.de/api/v2/real/users/current/carts/current/entries/
+{product: {code: "134057_1_1"}, quantity: 1}
+
+5. GET item of cart
+
+https://api-fab02.efood.real-pp.de/api/v2/real/users/current/carts
+
+
+6. GET all orders
+
+https://api-fab02.efood.real-pp.de/api/v2/real/users/current/orders?sort=byDate&pageSize=10&currentPage=0&storeName=vaos-48606
+-> Authorization:bearer 371160ae-817c-447e-9fb6-364028fa690c (pls use lated header!!!!)
+
+7. GET an order
+
+https://api-fab02.efood.real-pp.de/api/v2/real/users/current/orders/00000000?storeName=vaos-48606
+-> Authorization:bearer 371160ae-817c-447e-9fb6-364028fa690c  (pls use lated header!!!!)
+
