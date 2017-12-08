@@ -17,11 +17,20 @@ https://api-fab02ext.efood.real-pp.de/api/v2/real/users/current/carts/current/en
 {product: {code: "134057_1_1"}, quantity: 1}
 -> Authorization:bearer 371160ae-817c-447e-9fb6-364028fa690c  (pls use lated header!!!!)
 
+For anonymous Users ->
+
+create a cart first and get GUID from the response
+https://api-fab02ext.efood.real-pp.de/api/v2/real/users/anonymous/carts
+https://api-fab02ext.efood.real-pp.de/api/v2/real/users/anonymous/carts/d780c350-6816-49a2-9797-7c6dd2514fc2/entries/
+
 5. GET item of cart
 
 https://api-fab02ext.efood.real-pp.de/api/v2/real/users/current/carts
 -> Authorization:bearer 371160ae-817c-447e-9fb6-364028fa690c  (pls use lated header!!!!)
 
+For anonymous User
+
+https://api-fab02ext.efood.real-pp.de/api/v2/real/users/anonymous/carts/d780c350-6816-49a2-9797-7c6dd2514fc2?storeName=aos-48606
 
 6. GET all orders
 
